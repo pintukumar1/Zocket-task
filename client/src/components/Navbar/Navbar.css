@@ -1,0 +1,29 @@
+.navLogo{
+    width: 35px;
+    height: 35px;
+}
+
+.navHeaderText{
+    font-weight: bold;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.nav-link{
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.navBtn{
+    background-color: #0F6EFF;
+    font-weight: 450;
+    color: white;
+}
+
+.navBtn:hover{
+    background-color: white;
+    color: #0F6EFF;
+    border: 1px solid #0F6EFF;
+}
