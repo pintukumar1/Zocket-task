@@ -1,0 +1,27 @@
+.whyUsRow{
+    margin-top: 100px;
+}
+.whyUsHeader{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+.whyUsHeadings{
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.whyUsInfo{
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 32px;
+}
+
+.whyUsSecondCol{
+    margin-top: 80px;
+}
+@media only screen and (max-width: 768px) {
+  
+    .whyUsHeader{
+        font-size: 38px;
+    }
+      }

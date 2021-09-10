@@ -1,14 +1,16 @@
 import React from "react"
 import Navbar from "../Navbar/Navbar"
 import FbAds from "../FbAds30/FbAds30"
-import TrailorServices from '../TrailorMadeServices/TrailorMadeServices'
+import TailorServices from '../TrailorMadeServices/TailorMadeServices'
+import WhyUs from "../WhyUs/WhyUs"
 
 function Home() {
     return (
         <div>
             <Navbar />
             <FbAds />
-            <TrailorServices />
+            <TailorServices />
+            <WhyUs />
         </div>
     )
 }

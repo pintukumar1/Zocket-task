@@ -3,7 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import facebook from "../../assets/facebook.png";
 import instagram from "../../assets/instagram.png";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import './TrailorMadeServices.css'
+import './TailorMadeServices.css'
 
 function TailorServices() {
   return (
