@@ -26,9 +26,8 @@ function Navbar() {
             <div className="container-fluid">
               <a
                 className="navbar-brand text-dark navHeaderText d-flex align-items-center"
-                href="/"
-              >
-                <img src={ZocketLogo} alt="logo" className="navLogo" />
+                href="/" >
+                  <img src={ZocketLogo} alt="logo" className="navLogo" />
                 &nbsp;Zocket
               </a>
               <button
@@ -40,7 +39,7 @@ function Navbar() {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-             <GiHamburgerMenu className="text-dark"/>
+              <GiHamburgerMenu className="text-dark"/>
               </button>
               <div className="collapse navbar-collapse  justify-content-end" id="navbarNav">
                 <ul className="navbar-nav p-2 ml-auto nav">
