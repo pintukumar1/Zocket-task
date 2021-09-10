@@ -7,4 +7,6 @@ router.post('/earlyaccess', AuthController.EarlyAccess);
 
 router.post('/verifycode', AuthController.VerifyCode);
 
+router.get('/fetchedEmails', AuthController.FetchAllEmails)
+
 module.exports = router

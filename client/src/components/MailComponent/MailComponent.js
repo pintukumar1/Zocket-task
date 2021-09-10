@@ -42,8 +42,8 @@ function MailUs() {
                   required
                 />
                 <span className="bg-light"><button className="btn earlyAccessBtns">Get Early Access</button></span>
-              </div>
-                    </form>
+               </div>
+                     </form>
                    </div>
             
             </div>

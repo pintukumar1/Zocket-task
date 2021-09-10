@@ -5,6 +5,7 @@ import TailorServices from '../TrailorMadeServices/TailorMadeServices'
 import WhyUs from "../WhyUs/WhyUs"
 import HearIt from "../HearItFromThem/HearItFromThem"
 import MailUs from "../MailComponent/MailComponent"
+import Footer from "../FooterComponent/FooterComponent"
 
 function Home() {
     return (
@@ -15,6 +16,7 @@ function Home() {
             <WhyUs />
             <HearIt />
             <MailUs />
+            <Footer />
         </div>
     )
 }

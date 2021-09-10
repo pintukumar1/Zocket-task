@@ -1,23 +1,17 @@
-const mysql=require('mysql2')
+const db = require('../database/database')
 const nodemailer=require('nodemailer')
 const sendgridTransport=require('nodemailer-sendgrid-transport')
 require('dotenv').config()
 
+
 let Email;
 let otp;
 
-const db = mysql.createPool({
-    host: "localhost",
-    user: "root", 
-    password: `${process.env.PASSWORD}`,
-    database:"zocket-db"
-   })
-
-   const transporter = nodemailer.createTransport(sendgridTransport({
-       auth:{
-           api_key: `${process.env.SENDGRID_API_KEY}`
-       }
-   }))
+const transporter = nodemailer.createTransport(sendgridTransport({
+    auth:{
+        api_key: `${process.env.SENDGRID_API_KEY}`
+    }
+}))
 
 exports.EarlyAccess = (req, res) => {
     const email = req.body.email
@@ -38,16 +32,20 @@ exports.EarlyAccess = (req, res) => {
 exports.VerifyCode = (req, res) => {
     const code = req.body.code
     if(parseInt(code) === otp) {
-        db.query("INSERT INTO zocket_users (email) values (?)", [Email], (err, result) => {
-            if(err){
-             res.status(400).json({err})
-            } 
-            else {
-              res.status(200).json({message:"Successfully registered"})
-             }
-         })
-      }
-     else {
-        res.status(400).json({message:"Invalid code !"})
+        db.query("INSERT INTO zocket_users (email) values (?)", [Email])
+        .then(response => {
+            res.status(200).json({response})
+        }).catch(err => {
+            res.status(400).json({err})
+        })
     }
+}
+
+exports.FetchAllEmails = (req, res) => {
+    return db.query("SELECT * FROM zocket_users")
+    .then(response => {
+        res.status(200).json({response})
+    }).catch(err => {
+        res.status(400).json({err})
+    })
 }

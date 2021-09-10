@@ -1,0 +1,12 @@
+.heading{
+    color:red;
+    font-weight: 500;
+    padding-bottom: 2%;
+}
+
+.table{
+    padding: 2%;
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 50px;
+}
